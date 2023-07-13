@@ -99,6 +99,16 @@
         align-items: center;
         justify-content: center;
       }
+
+      &:first-child {
+        figure {
+          img {
+            display: block;
+            width: 55px;
+            height: auto;
+          }
+        }
+      }
     }
   }
 
@@ -292,6 +302,16 @@
 
       &:before {
         width: 1396px;
+      }
+
+      .swiper-slide {
+        &:first-child {
+          figure {
+            img {
+              width: 77px;
+            }
+          }
+        }
       }
     }
   }
