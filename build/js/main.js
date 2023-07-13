@@ -3,7 +3,7 @@ jQuery(document).ready(function ($) {
 
   if (document.querySelector(".partners-slider .swiper")) {
     const eventsSwiper = new Swiper(document.querySelector(".partners-slider .swiper"), {
-      loop: true,
+      loop: false,
       slidesPerView: "auto",
       spaceBetween: 0,
       speed: 500,

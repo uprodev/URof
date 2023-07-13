@@ -122,6 +122,11 @@
 
     .partners-slider {
       margin: 0;
+      text-align: center;
+
+      .swiper {
+        display: inline-block;
+      }
 
       .swiper-slide {
         figure {
