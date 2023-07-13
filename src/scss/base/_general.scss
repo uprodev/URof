@@ -1,0 +1,67 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  --bs-primary-rgb: #{$primary-rgb};
+  --bs-secondary-rgb: #{$secondary-rgb};
+}
+
+body {
+  background-color: $black;
+}
+
+.global-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 6px;
+
+  @include media-breakpoint-up(xl) {
+    padding: 0 29px;
+  }
+}
+
+figure {
+  margin: 0;
+  overflow: hidden;
+}
+
+.collapse:not(.show) {
+  display: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section {
+  margin: 0 0 10px;
+  background-color: $white;
+  border-radius: 5px;
+
+  @include media-breakpoint-up(lg) {
+    border-radius: 7px;
+    margin: 0 0 14px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    border-radius: 10px;
+    margin: 0 auto 20px;
+    max-width: $content-max;
+  }
+}

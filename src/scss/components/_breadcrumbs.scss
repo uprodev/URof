@@ -1,0 +1,39 @@
+.breadcrumbs {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.64px;
+  margin: 0 0 28px;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      &:after {
+        content: "|";
+        margin: 0 14px;
+        display: inline-block;
+        vertical-align: 0.15em;
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+
+      a {
+        color: $gray1;
+        text-decoration: none;
+      }
+    }
+  }
+}

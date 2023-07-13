@@ -1,0 +1,121 @@
+.marquee {
+  .text-marquee {
+    overflow: hidden;
+  }
+
+  .text-marquee__content {
+    white-space: nowrap;
+    line-height: 93%;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    will-change: transform;
+    width: 100%;
+    transition: all 0.2s;
+
+    .text-marquee__move {
+      will-change: transform;
+      -webkit-animation: marquee 20s linear infinite;
+      animation: marquee 20s linear infinite;
+      display: block;
+
+      .text-marquee__text {
+        display: inline-flex;
+      }
+    }
+  }
+}
+
+.header {
+  .marquee {
+    &:hover {
+      .text-marquee__move {
+        -webkit-animation-play-state: paused;
+        animation-play-state: paused;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    transform: translateZ(0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes marquee {
+  0% {
+    transform: translateZ(0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+// headlines
+.headline {
+  visibility: hidden;
+}
+
+.splitting {
+  perspective: 40vw;
+  line-height: 0;
+  visibility: visible;
+}
+.word {
+  display: inline-flex;
+  overflow: hidden;
+  transform: rotateX(-90deg) rotateY(0);
+  transform-origin: center bottom;
+  padding: 0 0 0.1em;
+  margin: 0 0 -0.1em;
+}
+.char {
+  display: block;
+  transform: translateY(150%);
+  opacity: 0;
+}
+
+// mask image {
+.image-masked {
+  -webkit-mask: url(../images/bg/mask-sm.png);
+  -webkit-mask-clip: border-box;
+  -webkit-mask-size: auto;
+  -webkit-mask-size: 100% 100%;
+
+  mask: url(../images/bg/mask-sm.png);
+  mask-clip: border-box;
+  mask-size: auto;
+  mask-size: 100% 100%;
+
+  @include media-breakpoint-up(lg) {
+    -webkit-mask-image: url(../images/bg/mask.png);
+    mask-image: url(../images/bg/mask.png);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.img-overlay {
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: "";
+    @include abs;
+    background: rgba($gray4, 0.2) url(../images/bg/img-overlay.png) repeat;
+  }
+}
+
+.fade-in-wrapper > * {
+  @extend .fade-in;
+}

@@ -1,0 +1,294 @@
+.before-artists {
+  padding: 40px 10px 3px;
+
+  .col-left {
+    padding: 50px 0 49px;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 2px;
+      background-color: $black;
+    }
+
+    &:before {
+      left: 0;
+      width: 27.6%;
+    }
+    &:after {
+      right: 0;
+      width: calc(72.4% - 16px);
+    }
+
+    .anchors {
+      margin: 31px 0 0;
+
+      a {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 36px;
+        margin: 0 0 10px;
+
+        &:before {
+          content: "";
+          background: url(../images/icons/chevron-right.svg) 0 / cover no-repeat;
+          width: 6px;
+          height: 10px;
+          margin: 0 11px 0 0;
+        }
+
+        &:hover {
+          opacity: 0.9;
+          color: $black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .col-right {
+    .row {
+      --bs-gutter-x: 11px;
+      --bs-gutter-y: 15px;
+    }
+
+    .artists-list {
+      padding: 0 0 38px;
+
+      & + .artists-list {
+        border-top: 2px solid $black;
+        padding-top: 30px;
+      }
+    }
+
+    .card-artist {
+      display: block;
+
+      &:hover {
+        color: $black;
+      }
+
+      .card-img {
+        @include img-abs-container(100%);
+
+        .icon {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          width: 12px;
+
+          img {
+            display: block;
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .flag {
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          width: 16px;
+
+          img {
+            display: block;
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+
+      .card-text {
+        padding: 0 5px 0;
+        font-size: 10px;
+
+        .card-name {
+          font-weight: 500;
+          line-height: 15px;
+          margin: 0 0 3px;
+        }
+        .card-description {
+          font-weight: 200;
+          line-height: 9px;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .col-wrapper {
+      display: flex;
+      margin: 0 -7px;
+
+      .col-left {
+        border-top: $border;
+        padding: 20px 0 0;
+        margin: 0 7px;
+        width: 32.2%;
+        flex: 0 0 auto;
+
+        &:before,
+        &:after {
+          display: none;
+        }
+      }
+
+      .col-right {
+        border-top: $border;
+        padding: 28px 0 0;
+        margin: 0 7px;
+        width: 100%;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 42px 57px 0;
+
+    .col-left {
+      .anchors {
+        margin: 57px 0 0;
+
+        a {
+          font-size: 13px;
+          line-height: 26px;
+          margin: 0 0 6px;
+
+          &:before {
+            margin: 0 7px 0 0;
+          }
+        }
+      }
+    }
+
+    .col-right {
+      .row {
+        --bs-gutter-x: 14px;
+        --bs-gutter-y: 33px;
+      }
+
+      .artists-list {
+        padding: 0 0 46px;
+
+        & + .artists-list {
+          border-top: 2px solid $black;
+          padding-top: 42px;
+          padding-bottom: 42px;
+        }
+      }
+
+      .card-artist {
+        .card-img {
+          padding-top: 98.9%;
+          .icon {
+            top: 7px;
+            right: 7px;
+            width: 16px;
+          }
+
+          .flag {
+            top: 7px;
+            left: 7px;
+            width: 21px;
+          }
+        }
+
+        .card-text {
+          padding: 4px 7px 0;
+
+          .card-name {
+            font-size: 13px;
+            line-height: 20px;
+            margin: 0 0 1px;
+          }
+          .card-description {
+            font-size: 9px;
+            line-height: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding: 60px 80px 0;
+
+    .col-wrapper {
+      margin: 0 -10px;
+
+      .col-left {
+        margin: 0 10px;
+        padding: 28px 0 0;
+
+        .anchors {
+          margin: 77px 0 0;
+
+          a {
+            font-size: 18px;
+            line-height: 36px;
+            margin: 0 0 10px;
+
+            &:before {
+              margin: 0 11px 0 0;
+            }
+          }
+        }
+      }
+
+      .col-right {
+        margin: 0 10px;
+        padding: 38px 0 0;
+
+        .row {
+          --bs-gutter-x: 20px;
+          --bs-gutter-y: 48px;
+        }
+
+        .artists-list {
+          padding: 0 0 68px;
+
+          & + .artists-list {
+            padding-top: 59px;
+            padding-bottom: 62px;
+          }
+        }
+
+        .card-artist {
+          .card-img {
+            padding-top: 98.9%;
+            .icon {
+              top: 10px;
+              right: 10px;
+              width: 23px;
+            }
+
+            .flag {
+              top: 10px;
+              left: 10px;
+              width: 30px;
+            }
+          }
+
+          .card-text {
+            padding: 5px 10px 0;
+
+            .card-name {
+              font-size: 18px;
+              line-height: 28px;
+              margin: 0 0 1px;
+            }
+            .card-description {
+              font-size: 12px;
+              line-height: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

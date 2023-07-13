@@ -1,0 +1,519 @@
+.before-idea {
+  .block-header {
+    padding: 40px 10px 0;
+    margin: 0 0 60px;
+
+    .block-label {
+      display: inline-block;
+      padding: 4px 10px;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 29px;
+      background-color: $black;
+      color: $white;
+      text-transform: uppercase;
+      margin: 0 0 4px 10px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+  }
+
+  .num-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -70px 0 0;
+    padding: 0 0 112px;
+    list-style: none;
+
+    li {
+      margin: 70px 0 0;
+      width: 61%;
+
+      .inner {
+        position: relative;
+        background: linear-gradient(180deg, #f0f0f0 0%, rgba(234, 234, 234, 0) 100%);
+        border-radius: 100%;
+        width: 187px;
+        height: 187px;
+        margin: auto;
+      }
+
+      .image {
+        position: absolute;
+        z-index: 2;
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .num {
+        position: absolute;
+        font-size: 98.716px;
+        font-weight: 700;
+        line-height: 103.912px;
+        letter-spacing: -4.936px;
+      }
+
+      .description {
+        position: absolute;
+        font-size: 12.469px;
+        font-weight: 700;
+        line-height: 18.704px;
+        text-transform: uppercase;
+      }
+
+      &.item-1 {
+        .image {
+          width: 36.9%;
+          height: 128.9%;
+          left: 2px;
+          top: -7.5%;
+        }
+        .num {
+          left: 20%;
+          top: 44%;
+          transform: translateY(-50%);
+        }
+        .description {
+          left: 79%;
+          top: 19%;
+        }
+      }
+
+      &.item-2 {
+        .image {
+          width: 100%;
+          height: 126.2%;
+          left: 0;
+          top: -9%;
+
+          img {
+            border-radius: 4.144px;
+          }
+        }
+        .num {
+          left: 50%;
+          top: 44%;
+          transform: translate3d(-50%, -50%, 0);
+        }
+        .description {
+          left: 71.6%;
+          top: 44%;
+          transform: translateY(-50%);
+        }
+      }
+
+      &.item-3 {
+        margin-top: 65px;
+
+        .inner {
+          transform: translateX(-24px);
+        }
+        .image {
+          width: 69%;
+          height: 67.9%;
+          left: 24%;
+          top: -3%;
+        }
+        .num {
+          left: 9%;
+          top: 44%;
+          transform: translate3d(0, -50%, 0);
+        }
+        .description {
+          left: 72.7%;
+          top: 56%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  .col-wrapper {
+    background: url(../images/bg/bg-gradient-bottom-sm.png) right bottom no-repeat;
+    background-size: 100% 100%;
+    padding: 0 10px;
+
+    .col-left {
+      border-top: $border;
+      padding: 50px 0 16px;
+
+      .link-arrow {
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+      }
+    }
+
+    .col-right {
+      padding: 0 0 78px;
+
+      ul {
+        margin: 33px 0 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          position: relative;
+          width: max-content;
+
+          .text {
+            font-size: 11.5vw;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.728px;
+            text-transform: uppercase;
+            color: $white;
+
+            span {
+              opacity: 0.5;
+            }
+          }
+
+          .sticker {
+            position: absolute;
+            width: 93.217px;
+            background-color: $black;
+            border-radius: 50%;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: $white;
+            padding: 6px 7px 8px;
+            min-height: 29px;
+          }
+
+          &:nth-child(1) {
+            .sticker {
+              left: 100%;
+              top: 70%;
+              transform: translateX(-44%);
+            }
+          }
+          &:nth-child(2) {
+            .sticker {
+              left: 100%;
+              top: 8%;
+              transform: translateX(-5%);
+            }
+          }
+          &:nth-child(3) {
+            transform: translateX(36px);
+            .sticker {
+              left: 0;
+              top: 65%;
+              transform: translateX(-20%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .num-list {
+      li {
+        .inner {
+          width: 300px;
+          height: 300px;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .num-list {
+      flex-direction: row;
+      justify-content: space-between;
+
+      li {
+        .inner {
+          width: 180px;
+          height: 180px;
+        }
+      }
+    }
+
+    .col-wrapper {
+      background: url(../images/bg/bg-gradient-bottom.png) right -50px bottom no-repeat;
+      background-size: 87% 102%;
+      display: flex;
+      margin: 0 -7px;
+      padding: 0;
+
+      .col-left {
+        padding: 23px 0 77px;
+        margin: 0 7px;
+        display: flex;
+        flex-direction: column;
+        width: 32.3%;
+        flex: 0 0 auto;
+
+        .link-box {
+          margin-top: auto;
+        }
+      }
+
+      .col-right {
+        border-top: $border;
+        padding: 35px 0 77px;
+        margin: 0 7px;
+        width: 100%;
+
+        p {
+          max-width: 590px;
+        }
+
+        ul {
+          li {
+            .text {
+              font-size: 7.8vw;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .num-list {
+      max-width: 1050px;
+      margin: auto;
+      align-items: flex-start;
+      padding: 0 0 138px;
+
+      li {
+        margin: 0;
+
+        &.item-3 {
+          margin-top: 0;
+        }
+
+        .inner {
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
+
+    .block-header {
+      font-size: 68px;
+      line-height: 80px;
+      padding: 0;
+      margin: 0 0 72px;
+
+      .block-label {
+        padding: 11px 15px;
+        font-size: 28px;
+        margin: 0;
+        transform: translateX(-16.7em);
+        position: relative;
+        left: 50%;
+      }
+    }
+
+    .col-wrapper {
+      background-position: right -80px bottom 0;
+      background-size: 95% 102%;
+
+      .col-right {
+        padding: 35px 0 91px;
+
+        ul {
+          margin: 62px 0 0;
+
+          li {
+            margin: 0 0 -8px;
+
+            .text {
+              font-size: 72px;
+              line-height: 86px;
+              letter-spacing: -1.5px;
+            }
+
+            .sticker {
+              width: 182px;
+              font-size: 13px;
+              line-height: 20px;
+              padding: 7px 20px;
+              min-height: 56px;
+            }
+
+            &:nth-child(1) {
+              .sticker {
+                top: 65%;
+                transform: translateX(-29%);
+              }
+            }
+            &:nth-child(2) {
+              .sticker {
+                top: 20%;
+                transform: translateX(-11%);
+              }
+            }
+            &:nth-child(3) {
+              transform: translateX(13.5em);
+              .sticker {
+                left: -11.5em;
+                transform: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 42px 56px 0;
+
+    .col-wrapper {
+      background-position: right -50px bottom 0;
+      background-size: 87% 102%;
+    }
+
+    .num-list {
+      li {
+        .inner {
+          width: 256px;
+          height: 256px;
+        }
+
+        .num {
+          font-size: 135.177px;
+          line-height: 142.292px;
+          letter-spacing: -6.759px;
+        }
+
+        .description {
+          font-size: 18px;
+          line-height: 25px;
+        }
+
+        &.item-1 {
+          .num {
+            left: 13%;
+            top: 46%;
+          }
+          .description {
+            left: 82%;
+            top: 18%;
+          }
+        }
+
+        &.item-2 {
+          .num {
+            left: 48%;
+            top: 45.5%;
+          }
+          .description {
+            left: 70%;
+            top: 47%;
+          }
+        }
+
+        &.item-3 {
+          .inner {
+            transform: translateX(-15px);
+          }
+
+          .num {
+            top: 45.5%;
+          }
+          .description {
+            top: 57%;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding: 85px 80px 0;
+
+    .block-header {
+      margin: 0 0 105px;
+      padding: 0 76px;
+
+      .block-label {
+        padding: 21px 18px;
+        font-size: 40px;
+        transform: translateX(-16.4em);
+      }
+    }
+
+    .num-list {
+      max-width: 1450px;
+      padding: 0 0 193px;
+
+      li {
+        .inner {
+          width: 360px;
+          height: 360px;
+        }
+
+        .num {
+          font-size: 190px;
+          line-height: 200px;
+          letter-spacing: -9.5px;
+        }
+
+        .description {
+          font-size: 24px;
+          line-height: 36px;
+        }
+      }
+    }
+
+    .col-wrapper {
+      margin: 0 -10px;
+
+      .col-left {
+        margin: 0 10px;
+        padding: 33px 0 110px;
+      }
+
+      .col-right {
+        margin: 0 10px;
+        padding: 49px 0 127px;
+
+        p {
+          max-width: 827px;
+        }
+
+        ul {
+          margin: 89px 0 0;
+
+          li {
+            margin: 0 0 -10px;
+
+            .text {
+              font-size: 100px;
+              line-height: 120px;
+              letter-spacing: -2px;
+            }
+
+            .sticker {
+              width: 256px;
+              font-size: 18px;
+              line-height: 28px;
+              padding: 12px 30px;
+              min-height: 80px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

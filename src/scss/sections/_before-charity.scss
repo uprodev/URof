@@ -1,0 +1,158 @@
+.before-charity {
+  background-color: transparent;
+
+  .block-text {
+    background-color: $white;
+    border-radius: 5px;
+    padding: 40px 10px 40px;
+    margin: 0 0 10px;
+    position: relative;
+
+    h2 {
+      margin: 0 50px 30px 0;
+    }
+
+    p {
+      margin: 0 0 21px;
+    }
+
+    .text-center {
+      padding: 14px 0 0;
+    }
+
+    .btn {
+      min-width: 120px;
+    }
+  }
+
+  .block-image {
+    border-radius: 5px;
+    padding: 12px 15px 13px;
+
+    img {
+      @include img-fit;
+      border-radius: 100px;
+    }
+
+    .block-label {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .d-md-flex {
+      margin-left: -7px;
+      margin-right: -7px;
+    }
+
+    .block-text {
+      margin: 0 7px;
+      width: 100%;
+    }
+
+    .block-image {
+      margin: 0 7px;
+      width: 45%;
+      flex: 0 0 auto;
+
+      img {
+        border-radius: 215px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .block-text,
+    .block-image {
+      border-radius: 7px;
+    }
+
+    .block-image {
+      width: 56.5%;
+      padding: 21px 36px;
+      position: relative;
+
+      .block-label {
+        display: block;
+        width: 170px;
+        position: absolute;
+        left: 13%;
+        bottom: 3.5%;
+
+        img {
+          height: auto;
+        }
+      }
+    }
+
+    .block-text {
+      display: flex;
+      flex-direction: column;
+
+      .text-center {
+        text-align: left !important;
+        margin-top: auto;
+      }
+
+      .btn {
+        min-width: 156px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .block-text {
+      padding: 35px 56px 55px 56px;
+
+      h2 {
+        margin: 0 0 14px;
+      }
+
+      p {
+        font-size: 12px;
+        line-height: 19px;
+        margin: 0 0 18px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    .d-md-flex {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+
+    .block-image {
+      margin: 0 10px;
+      padding: 30px 50px;
+
+      img {
+        border-radius: 300px;
+      }
+
+      .block-label {
+        width: 239px;
+        bottom: 4%;
+      }
+    }
+
+    .block-text {
+      margin: 0 10px;
+      padding: 48px 80px 80px;
+
+      h2 {
+        margin: 0 0 19px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 26px;
+        margin: 0 0 26px;
+      }
+
+      .btn {
+        min-width: 220px;
+      }
+    }
+  }
+}
