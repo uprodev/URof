@@ -79,4 +79,41 @@ jQuery(document).ready(function ($) {
   $("#btnDonateHide").on("click", function () {
     $(".before-donate").slideUp(400);
   });
+
+  function donateRadiosCheck() {
+    var donateRegion = $("#formDonate input[name=region]"),
+      donatePayment = $("#formDonate input[name=payment]");
+    var region, payment, activePanel;
+
+    donateRegion.each(function () {
+      if ($(this).prop("checked")) {
+        region = $(this).val();
+      }
+    });
+    donatePayment.each(function () {
+      if ($(this).prop("checked")) {
+        payment = $(this).val();
+      }
+    });
+
+    if (region === "ukraine") {
+      activePanel = payment === "bank" ? 1 : 2;
+    } else {
+      activePanel = payment === "bank" ? 3 : 4;
+    }
+
+    $(".donate-result.active").removeClass("active");
+    $(".donate-result").each(function () {
+      var num = parseInt($(this).data("panel"));
+      if (num === activePanel) {
+        $(this).addClass("active");
+      }
+    });
+  }
+
+  donateRadiosCheck();
+
+  $("#formDonate input[type=radio]").on("change", function () {
+    donateRadiosCheck();
+  });
 });

@@ -115,6 +115,14 @@
         }
       }
     }
+
+    .donate-result {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
   }
 
   @include media-breakpoint-up(md) {
