@@ -47,6 +47,13 @@ jQuery(document).ready(function ($) {
     var target = $($(this).attr("href"));
     if (target.length) {
       $("html, body").animate({ scrollTop: target.offset().top }, 800);
+
+      if ($(this).attr("href") === "#charity") {
+        $(".tabs-nav .active").removeClass("active");
+        $(".tab-panel.active").removeClass("active").hide(0);
+        $(".tabs-nav a[href='#tab03']").parent().addClass("active");
+        $("#tab03").addClass("active").fadeIn(400);
+      }
     }
   });
 
