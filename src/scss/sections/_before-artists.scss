@@ -76,6 +76,12 @@
       .card-img {
         @include img-abs-container(100%);
 
+        & > img,
+        picture img {
+          -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+        }
+
         .icon {
           position: absolute;
           top: 5px;
@@ -86,7 +92,6 @@
             display: block;
             width: 100%;
             height: auto;
-            filter: grayscale(1);
           }
         }
 

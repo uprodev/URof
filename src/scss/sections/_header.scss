@@ -60,11 +60,13 @@
     height: calc(100vh - var(--header-top) - 6px);
     border-radius: 5px;
     background: $white;
-    padding: 82px 15px 30px;
+    padding: 82px 15px 45px;
     text-align: center;
     transform: scaleY(0);
     transform-origin: center top;
     transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
 
     &.active {
       transform: scaleY(1);
@@ -80,12 +82,35 @@
       }
 
       a {
-        color: var(--black, #000);
+        color: $black;
         font-size: 16px;
         font-weight: 700;
         line-height: 24px;
         text-transform: uppercase;
         text-decoration: none;
+      }
+    }
+
+    .lang-switch {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: auto;
+
+      a {
+        color: $black;
+        text-decoration: none;
+        margin: 0 6.5px;
+
+        &:not(.active) {
+          color: #bfbfbf;
+
+          &:hover {
+            color: $black;
+          }
+        }
       }
     }
   }
@@ -141,8 +166,10 @@
     }
 
     .header-navigation {
-      position: static;
-      width: auto;
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
       height: auto;
       border-radius: 0;
       background: none;
@@ -150,6 +177,8 @@
       text-align: center;
       transform: none;
       transition: none;
+      flex-direction: row;
+      justify-content: center;
 
       ul {
         margin: 0;
@@ -168,12 +197,27 @@
       .btn {
         display: none;
       }
+
+      .lang-switch {
+        font-size: 12px;
+        line-height: 18px;
+        margin: 0;
+        position: absolute;
+        right: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
   }
 
   @include media-breakpoint-up(xl) {
     .header-main {
       padding: 10px 57px 9px;
+    }
+    .header-navigation {
+      .lang-switch {
+        right: 34px;
+      }
     }
   }
 
@@ -217,6 +261,15 @@
 
         a {
           font-size: 16px;
+        }
+      }
+
+      .lang-switch {
+        font-size: 16px;
+        right: 46px;
+
+        a {
+          margin: 0 0 0 18px;
         }
       }
     }
