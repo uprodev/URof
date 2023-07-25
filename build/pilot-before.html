@@ -225,21 +225,58 @@
               <div id="artistsUkrainian" class="artists-list">
                 <div class="row">
                   <div class="col-6 col-sm-4 col-md-3">
-                    <a href="#" class="card-artist">
+                    <div class="card-artist">
                       <div class="card-img">
-                        <picture>
+                        <picture data-bs-toggle="modal" data-bs-target="#modalArtist">
                           <source srcset="./images/artist-01.jpg" media="(min-width: 768px)" />
                           <source srcset="./images/artist-01.jpg 2x, ./images/artist-01-sm.jpg 1x" />
                           <img src="./images/artist-01-sm.jpg" alt="" />
                         </picture>
-                        <span class="icon"><img src="./images/icons/instagram.svg" alt="" /></span>
+                        <a href="#" class="icon"><img src="./images/icons/instagram.svg" alt="" /></a>
                         <span class="flag"><img src="./images/flag-ua.svg" alt="" /></span>
                       </div>
-                      <div class="card-text">
+                      <div class="card-text" data-bs-toggle="modal" data-bs-target="#modalArtist">
                         <div class="card-name">Ganna Bogachuk</div>
                         <div class="card-description">Visual artist</div>
                       </div>
-                    </a>
+                    </div>
+        
+                    <div class="modal-artist modal fade" id="modalArtist" tabindex="-1" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          <div class="modal-header">
+                            <h2 class="modal-title">Daria Kalashnikova</h2>
+                            <p>Focuses on capturing the essence of a scene or subject, often using loose brushwork.</p>
+                          </div>
+                          <div class="modal-body">
+                            <div class="modal-image">
+                              <div class="img">
+                                <picture>
+                                  <source srcset="./images/artist-02.jpg" media="(min-width: 768px)" />
+                                  <source srcset="./images/artist-02.jpg 2x, ./images/artist-02-sm.jpg 1x" />
+                                  <img src="./images/artist-02-sm.jpg" alt="" />
+                                </picture>
+                                <a href="#" class="icon"><img src="./images/icons/instagram1.svg" alt="" /></a>
+                                <span class="flag"><img src="./images/flag-ua.svg" alt="" /></span>
+                              </div>
+                              <div class="text">
+                                <p>"My whole life has been spent walking by the side of a bottomless chasm, jumping from stone to stone.”</p>
+                              </div>
+                              <div class="logo"><img src="images/logo.svg" alt="" /></div>
+                            </div>
+                            <p>These exhibitions provide an excellent platform for me to connect with fellow artists, art collectors, and art enthusiasts like you. I am looking forward to engaging in meaningful conversations about art, exchanging ideas, and learning from the diverse perspectives present at these events. I extend my heartfelt gratitude to everyone who has supported and encouraged me on my artistic journey.</p>
+                          </div>
+                          <div class="img-list">
+                            <div class="inner">
+                              <figure><img src="images/img-06.jpg" alt="" /></figure>
+                              <figure><img src="images/img-06.jpg" alt="" /></figure>
+                              <figure><img src="images/img-06.jpg" alt="" /></figure>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="col-6 col-sm-4 col-md-3">
                     <a href="#" class="card-artist">

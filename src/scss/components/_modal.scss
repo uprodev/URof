@@ -1,0 +1,334 @@
+.modal-artist {
+  .modal-dialog {
+    width: 88.75%;
+    max-width: 1150px;
+    margin: 0.5rem auto;
+  }
+
+  .modal-content {
+    background-color: $white;
+    background-image: url(../images/bg/bg-popup-sm.svg), url(../images/bg/bg-popup-top-1-sm.svg), url(../images/bg/bg-popup-top-2-sm.svg);
+    background-position: center bottom, top right, top right;
+    background-repeat: no-repeat;
+    background-size: 100% auto, auto, auto;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .btn-close {
+    background: url(../images/icons/ico-close.svg) 0 0 no-repeat;
+    opacity: 1;
+    position: absolute;
+    right: 14px;
+    top: 16px;
+    z-index: 9;
+  }
+
+  .modal-header {
+    flex-direction: column;
+    padding: 26px 22px 21px;
+    border: none;
+
+    h2 {
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 32px;
+      margin: 0 0 10px;
+      width: 100%;
+    }
+
+    p {
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 12.491px;
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  .modal-body {
+    padding: 0 22px 24px;
+
+    & > p {
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 14px;
+      margin: 15px 0 0;
+    }
+
+    .modal-image {
+      display: flex;
+      margin: 0 -7px;
+      position: relative;
+
+      &:after {
+        content: url(../images/bg/bg-popup-image-sm.svg);
+        position: absolute;
+        right: -16px;
+        top: -40px;
+      }
+
+      .img {
+        width: 50%;
+        padding: 0 7px;
+        position: relative;
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+
+        .icon {
+          position: absolute;
+          top: 4px;
+          right: 11px;
+          width: 12px;
+        }
+
+        .flag {
+          position: absolute;
+          top: 4px;
+          left: 11px;
+          width: 13px;
+        }
+      }
+
+      .text {
+        width: 50%;
+        padding: 0 7px;
+
+        p {
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 14px;
+          margin: 0;
+        }
+      }
+
+      .logo {
+        display: none;
+      }
+    }
+  }
+
+  .img-list {
+    display: flex;
+    overflow: auto;
+    justify-content: center;
+    padding: 0 0 30px;
+
+    .inner {
+      display: inline-flex;
+      justify-content: center;
+
+      figure {
+        width: 139px;
+        padding: 0 5px;
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .modal-content {
+      display: block;
+      position: relative;
+      background-image: url(../images/bg/bg-popup.svg), url(../images/bg/bg-popup-top-1.svg), url(../images/bg/bg-popup-top-2.svg);
+      border-radius: 7px;
+    }
+
+    .modal-header {
+      padding: 42px 40px 25px;
+      width: calc(100% - 225px);
+
+      h2 {
+        font-size: 36px;
+        line-height: 54px;
+        margin: 0 0 5px;
+      }
+
+      p {
+        font-size: 13px;
+        line-height: 20px;
+      }
+    }
+
+    .modal-body {
+      padding: 0 40px 25px;
+      width: calc(100% - 225px);
+      position: static;
+
+      & > p {
+        font-size: 13px;
+        line-height: 22px;
+        margin: 0;
+      }
+
+      .modal-image {
+        margin: 0;
+        flex-direction: column;
+        position: absolute;
+        right: 45px;
+        top: 42px;
+        width: 180px;
+        bottom: 70px;
+
+        &:after {
+          content: url(../images/bg/bg-popup-image-lg.svg);
+          position: absolute;
+          left: -92px;
+          top: -42px;
+          right: auto;
+        }
+
+        .img {
+          width: 100%;
+          padding: 0;
+          position: relative;
+          z-index: 1;
+
+          .icon {
+            top: 6px;
+            right: 6px;
+            width: 16px;
+          }
+
+          .flag {
+            top: 6px;
+            left: 6px;
+            width: 20px;
+          }
+        }
+
+        .text {
+          width: 100%;
+          padding: 10px 0 0;
+
+          p {
+            font-size: 11px;
+            line-height: 17px;
+          }
+        }
+
+        .logo {
+          margin-top: auto;
+          display: block;
+          text-align: center;
+
+          img {
+            width: 106px;
+            height: auto;
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    .img-list {
+      width: calc(100% - 225px);
+      justify-content: flex-start;
+      padding: 0 40px 44px;
+
+      .inner {
+        display: flex;
+        margin: 0 -15px;
+
+        figure {
+          width: 33.3333%;
+          padding: 0 15px;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    .modal-content {
+      border-radius: 10px;
+    }
+
+    .modal-header {
+      display: block;
+      width: calc(100% - 328px);
+      padding: 62px 83px 37px 60px;
+
+      h2 {
+        font-size: 54px;
+        line-height: 80px;
+        margin: 0 0 10px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 28px;
+        max-width: 568px;
+      }
+    }
+
+    .modal-body {
+      padding: 0 83px 37px 60px;
+      width: calc(100% - 328px);
+
+      & > p {
+        font-size: 18px;
+        line-height: 32px;
+      }
+
+      .modal-image {
+        right: 65px;
+        top: 62px;
+        width: 263px;
+        bottom: 125px;
+
+        &:after {
+          content: url(../images/bg/bg-popup-image.svg);
+          left: -92px;
+          top: -62px;
+        }
+
+        .img {
+          .icon {
+            top: 7px;
+            right: 7px;
+            width: 23px;
+          }
+
+          .flag {
+            top: 7px;
+            left: 7px;
+            width: 30px;
+          }
+        }
+
+        .text {
+          padding: 15px 0 0;
+
+          p {
+            font-size: 16px;
+            line-height: 25px;
+          }
+        }
+
+        .logo {
+          img {
+            width: 159px;
+          }
+        }
+      }
+    }
+
+    .img-list {
+      width: calc(100% - 338px);
+      padding: 0 83px 62px 60px;
+    }
+  }
+}

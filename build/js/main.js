@@ -42,7 +42,7 @@ jQuery(document).ready(function ($) {
   });
 
   // anchors
-  $(".header-navigation a, .anchors a, .link-anchor").on("click", function (e) {
+  $(".header-navigation ul a, .anchors a, .link-anchor").on("click", function (e) {
     e.preventDefault();
     var target = $($(this).attr("href"));
     if (target.length) {
