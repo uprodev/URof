@@ -185,7 +185,7 @@
         display: flex;
 
         li {
-          margin: 0 22px;
+          margin: 0 10px;
         }
 
         a {
@@ -215,6 +215,12 @@
       padding: 10px 57px 9px;
     }
     .header-navigation {
+      ul {
+        li {
+          margin: 0 15px;
+        }
+      }
+
       .lang-switch {
         right: 34px;
       }
@@ -256,7 +262,7 @@
 
       ul {
         li {
-          margin: 0 30px;
+          margin: 0 20px;
         }
 
         a {

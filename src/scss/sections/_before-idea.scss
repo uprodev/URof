@@ -30,7 +30,6 @@
 
     li {
       margin: 70px 0 0;
-      width: 61%;
 
       .inner {
         position: relative;
@@ -69,20 +68,28 @@
       }
 
       &.item-1 {
+        padding-left: 40px;
+
+        .inner {
+          width: 163px;
+          height: 163px;
+        }
         .image {
-          width: 36.9%;
-          height: 128.9%;
-          left: 2px;
-          top: -7.5%;
+          width: 95%;
+          height: 112.3%;
+          left: -57%;
+          top: 0;
         }
         .num {
-          left: 20%;
-          top: 44%;
+          font-size: 85.999px;
+          letter-spacing: -4.3px;
+          left: 12.3%;
+          top: 50%;
           transform: translateY(-50%);
         }
         .description {
-          left: 79%;
-          top: 19%;
+          left: 75%;
+          top: 72%;
         }
       }
 
@@ -111,15 +118,22 @@
 
       &.item-3 {
         margin-top: 65px;
+        padding-right: 80px;
 
         .inner {
-          transform: translateX(-24px);
+          width: 183px;
+          height: 183px;
         }
+
         .image {
-          width: 69%;
-          height: 67.9%;
-          left: 24%;
-          top: -3%;
+          // width: 136.6%;
+          // height: 124%;
+          // left: 8px;
+          // top: -8px;
+          width: 60%;
+          height: 106%;
+          left: 34%;
+          top: -2%;
         }
         .num {
           left: 9%;
@@ -127,8 +141,8 @@
           transform: translate3d(0, -50%, 0);
         }
         .description {
-          left: 72.7%;
-          top: 56%;
+          left: 75%;
+          top: 26%;
           transform: translateY(-50%);
         }
       }
@@ -221,36 +235,13 @@
     }
   }
 
-  @include media-breakpoint-up(sm) {
-    .num-list {
-      li {
-        .inner {
-          width: 300px;
-          height: 300px;
-        }
-      }
-    }
-  }
-
   @include media-breakpoint-up(md) {
-    .num-list {
-      flex-direction: row;
-      justify-content: space-between;
-
-      li {
-        .inner {
-          width: 180px;
-          height: 180px;
-        }
-      }
-    }
-
     .col-wrapper {
       background: url(../images/bg/bg-gradient-bottom.png) right -50px bottom no-repeat;
       background-size: 87% 102%;
       display: flex;
       margin: 0 -7px;
-      padding: 0;
+      // padding: 0;
 
       .col-left {
         padding: 23px 0 77px;
@@ -292,17 +283,24 @@
       margin: auto;
       align-items: flex-start;
       padding: 0 0 138px;
+      flex-direction: row;
+      justify-content: center;
 
       li {
-        margin: 0;
+        margin: 0 30px;
+
+        &.item-1 {
+          padding: 0;
+        }
 
         &.item-3 {
           margin-top: 0;
+          padding: 0;
         }
 
         .inner {
-          width: 200px;
-          height: 200px;
+          width: 200px !important;
+          height: 200px !important;
         }
       }
     }
@@ -385,13 +383,15 @@
 
     .num-list {
       li {
+        margin: 0 45px;
+
         .inner {
-          width: 256px;
-          height: 256px;
+          width: 220px !important;
+          height: 220px !important;
         }
 
         .num {
-          font-size: 135.177px;
+          font-size: 135.177px !important;
           line-height: 142.292px;
           letter-spacing: -6.759px;
         }
@@ -405,10 +405,6 @@
           .num {
             left: 13%;
             top: 46%;
-          }
-          .description {
-            left: 82%;
-            top: 18%;
           }
         }
 
@@ -429,10 +425,8 @@
           }
 
           .num {
+            left: 4%;
             top: 45.5%;
-          }
-          .description {
-            top: 57%;
           }
         }
       }
@@ -455,16 +449,18 @@
 
     .num-list {
       max-width: 1450px;
-      padding: 0 0 193px;
+      padding: 0 0 193px 80px;
 
       li {
+        margin: 0 63px;
+
         .inner {
-          width: 360px;
-          height: 360px;
+          width: 360px !important;
+          height: 360px !important;
         }
 
         .num {
-          font-size: 190px;
+          font-size: 190px !important;
           line-height: 200px;
           letter-spacing: -9.5px;
         }

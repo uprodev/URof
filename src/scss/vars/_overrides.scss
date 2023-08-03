@@ -2,6 +2,7 @@ $font-family-base: "e-ukraine_head", Arial, sans-serif;
 
 $black: #000;
 $white: #fff;
+$light: #f8f8f8;
 
 $yellow: #ffcb45;
 
@@ -9,10 +10,13 @@ $primary: $yellow;
 $secondary: $black;
 $primary-rgb: 255, 203, 69;
 $secondary-rgb: 0, 0, 0;
+$light-rgb: 248, 248, 248;
 
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
+  "light": $light,
+  "black": $black,
 );
 
 $border: 2px solid $black;
@@ -41,6 +45,8 @@ $grid-breakpoints: (
 );
 
 $content-max: 1840px;
+
+$btn-border-width: 2px;
 
 // forms
 $input-padding-y: 0.94rem;

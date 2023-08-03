@@ -37,6 +37,27 @@
     .block-label {
       display: none;
     }
+
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -5px;
+      padding: 3px 0 11px;
+
+      figure {
+        padding: 9px 3px 0;
+        width: 50%;
+      }
+
+      span {
+        display: block;
+        @include img-abs-container(72.5%);
+      }
+
+      img {
+        border-radius: 0;
+      }
+    }
   }
 
   @include media-breakpoint-up(md) {
@@ -114,6 +135,21 @@
         margin: 0 0 18px;
       }
     }
+
+    .block-image {
+      .images {
+        margin: 0;
+        padding: 0 45px 34px;
+
+        figure {
+          padding: 14px 6px 0;
+        }
+
+        span {
+          @include img-abs-container(62%);
+        }
+      }
+    }
   }
 
   @include media-breakpoint-up(xxl) {
@@ -133,6 +169,14 @@
       .block-label {
         width: 239px;
         bottom: 4%;
+      }
+
+      .images {
+        padding: 0 62px 50px;
+
+        figure {
+          padding: 20px 9px 0;
+        }
       }
     }
 

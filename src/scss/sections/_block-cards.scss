@@ -1,0 +1,246 @@
+.block-cards {
+  background-color: $black;
+
+  &:first-child {
+    padding: 6px 0 0;
+  }
+
+  .row {
+    --bs-gutter-x: 10px;
+    --bs-gutter-y: 6px;
+  }
+
+  .card {
+    background-color: $white;
+    border-radius: 5px;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .card-text {
+      padding: 20px 10px 0;
+      position: relative;
+      z-index: 1;
+
+      p {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 200;
+        line-height: 24px;
+      }
+    }
+
+    figure {
+      margin: auto 0 0;
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &.card-1 {
+      .card-text {
+        margin: 0 0 -7px;
+      }
+
+      figure {
+        text-align: right;
+        padding-right: 35px;
+
+        img {
+          display: inline-block;
+          width: 185px;
+        }
+      }
+    }
+
+    &.card-2 {
+      figure {
+        img {
+          width: 209px;
+          margin: auto;
+        }
+      }
+    }
+
+    &.card-3 {
+      figure {
+        img {
+          border-radius: 0 0 5px 5px;
+        }
+      }
+    }
+
+    &.card-2,
+    &.card-3 {
+      &:before {
+        content: "";
+        background: url(../images/icons/ico-arrow-down.svg) no-repeat;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 28px;
+        height: 8px;
+        margin-left: -14px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .card {
+      height: 100%;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        background-color: $white;
+        width: 10px;
+        height: 25px;
+        mask-image: url(../images/bg/unit.png);
+        mask-size: 100% auto;
+        transform: translateY(-50%);
+      }
+
+      h2 {
+        font-size: 26px;
+      }
+
+      &.card-1 {
+        .card-text {
+          margin: 0;
+        }
+      }
+
+      &.card-2,
+      &.card-3 {
+        &:before {
+          display: none;
+        }
+      }
+      &.card-3 {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    &:first-child {
+      padding: 14px 0 0;
+    }
+
+    .row {
+      --bs-gutter-x: 14px;
+    }
+
+    .card {
+      min-height: 496px;
+      border-radius: 7px;
+
+      &:after {
+        width: 14px;
+        height: 35px;
+      }
+
+      .card-text {
+        padding: 32px 30px 0;
+
+        p {
+          font-size: 17px;
+          line-height: 30px;
+        }
+      }
+
+      h2 {
+        font-size: 42px;
+        line-height: 56px;
+        margin: 0 0 6px;
+      }
+
+      &.card-1 {
+        .card-text {
+          margin: 0 0 -7px;
+        }
+
+        figure {
+          padding-right: 60px;
+
+          img {
+            width: 200px;
+          }
+        }
+      }
+
+      &.card-2 {
+        figure {
+          img {
+            width: 74.65%;
+          }
+        }
+      }
+
+      &.card-3 {
+        figure {
+          img {
+            border-radius: 0 0 7px 7px;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    &:first-child {
+      padding: 20px 0 0;
+    }
+
+    .row {
+      --bs-gutter-x: 20px;
+    }
+
+    .card {
+      min-height: 697px;
+      border-radius: 10px;
+
+      &:after {
+        width: 20px;
+        height: 50px;
+      }
+
+      .card-text {
+        padding: 42px 45px 0;
+
+        p {
+          font-size: 24px;
+          line-height: 42px;
+        }
+      }
+
+      h2 {
+        font-size: 60px;
+        line-height: 80px;
+        margin: 0 0 8px;
+      }
+
+      &.card-1 {
+        .card-text {
+          margin: 0 0 -12px;
+        }
+
+        figure {
+          padding-right: 80px;
+
+          img {
+            width: 294px;
+          }
+        }
+      }
+    }
+  }
+}

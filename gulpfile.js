@@ -152,16 +152,7 @@ function devCSS() {
 }
 
 function pluginsJS() {
-  return gulp
-    .src(src.jslib)
-    .pipe(cache())
-    .pipe(concat("plugins.js"))
-    .pipe(
-      uglify({
-        toplevel: true,
-      })
-    )
-    .pipe(gulp.dest(build.js));
+  return gulp.src(src.jslib).pipe(cache()).pipe(concat("plugins.js")).pipe(uglify()).pipe(gulp.dest(build.js));
 }
 
 function devJS() {

@@ -1,0 +1,331 @@
+.block-events {
+  padding: 30px 10px 0;
+  background-image: url(../images/bg/bg-events-1.svg), url(../images/bg/bg-events-2.svg);
+  background-size: 110% auto, 200% auto;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+
+  h2 {
+    border-top: 2px solid $black;
+    padding: 17px 0 0;
+    margin: 0 0 10px;
+  }
+
+  .tabs-nav {
+    position: relative;
+
+    .tab-nav-toggler {
+      cursor: pointer;
+      background: #f8f8f8;
+      border: none;
+      -webkit-appearance: none;
+      appearance: none;
+      padding: 0 16px 0 10px;
+      display: flex;
+      width: 100%;
+      height: 40px;
+      align-items: center;
+      justify-content: space-between;
+
+      &:after {
+        content: "";
+        display: block;
+        background: url(../images/icons/chevron-arrow-down.svg);
+        width: 8px;
+        height: 6px;
+      }
+    }
+
+    ul {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      right: 0;
+      display: none;
+      list-style: none;
+      margin: 0;
+      padding: 0 10px 20px;
+      background: #f8f8f8;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+
+      li {
+        margin: 0 0 10px;
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .tab-panel {
+    display: none;
+    padding: 10px 0 0;
+  }
+
+  h3 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 32px;
+    margin: 0 0 18px;
+  }
+
+  .events-list {
+    margin: 0 0 0 80px;
+    border-left: 2px solid $black;
+
+    .title {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 24px;
+      border: 2px solid $black;
+      border-radius: 50%;
+      text-align: center;
+      padding: 0.6em 1.8em;
+      display: inline-block;
+      margin-left: -80px;
+      background: $white;
+      min-width: 11.6em;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0 0 30px 20px;
+      list-style: none;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 200;
+
+      li {
+        margin: 20px 0 0;
+        position: relative;
+
+        &:before {
+          content: "";
+          width: 8px;
+          height: 8px;
+          border-radius: 100%;
+          background-color: $black;
+          position: absolute;
+          left: -25px;
+          top: 0.4em;
+        }
+      }
+
+      .event-date {
+        font-weight: 700;
+        margin: 0 0 4px;
+      }
+
+      .event-description {
+        p {
+          margin: 0;
+        }
+        strong {
+          font-weight: 700;
+          display: block;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    background-size: 100% auto, 150% auto;
+  }
+
+  @include media-breakpoint-up(md) {
+    background-size: auto;
+
+    h2 {
+      border-top: none;
+      padding: 0;
+      margin: 0 0 25px;
+      text-align: center;
+    }
+
+    .tabs-nav {
+      .tab-nav-toggler {
+        display: none;
+      }
+
+      ul {
+        position: static;
+        display: flex !important;
+        padding: 0;
+        margin: 0 -8px;
+        background: none;
+
+        li {
+          margin: 0;
+          padding: 0 8px;
+          width: 100%;
+
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f8f8;
+            border-top: 1px solid $black;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 30px;
+            text-transform: uppercase;
+            height: 57px;
+          }
+
+          &:hover,
+          &.active {
+            a {
+              background-color: $black;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+
+    .tab-panel {
+      padding: 34px 0 0;
+    }
+
+    h3 {
+      display: none;
+    }
+
+    .events-list {
+      margin: 0 auto;
+      border-left: none;
+      width: 700px;
+      position: relative;
+      padding: 0 0 25px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: calc(50% - 1px);
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: $black;
+      }
+
+      .title {
+        font-size: 18px;
+        line-height: 18px;
+        margin: auto;
+        display: block;
+        width: 11.6em;
+        position: relative;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0 0 25px;
+        font-size: 17px;
+        line-height: 30px;
+
+        li {
+          margin: 28px 0 0;
+          display: flex;
+
+          &:before {
+            left: calc(50% - 4px);
+            top: 0.4em;
+          }
+        }
+
+        .event-date {
+          width: 50%;
+          padding: 0 35px 0 0;
+          margin: 0;
+          text-align: right;
+        }
+
+        .event-description {
+          width: 50%;
+          padding: 0 0 0 35px;
+
+          p {
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 35px 57px 0;
+
+    .tabs-nav {
+      ul {
+        li {
+          a {
+            font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding: 50px 80px 0;
+
+    h2 {
+      margin: 0 0 34px;
+    }
+
+    .tabs-nav {
+      ul {
+        margin: 0 -12px;
+
+        li {
+          padding: 0 12px;
+
+          a {
+            border-top: 2px solid $black;
+            font-size: 24px;
+            height: 80px;
+          }
+        }
+      }
+    }
+
+    .tab-panel {
+      padding: 48px 0 0;
+    }
+
+    .events-list {
+      padding: 0 0 34px;
+
+      .title {
+        line-height: 24px;
+        width: 12.2em;
+        padding: 0.9em 1.8em;
+      }
+
+      ul {
+        padding: 0 0 38px;
+        font-size: 24px;
+
+        li {
+          margin: 36px 0 0;
+        }
+
+        .event-date {
+          padding: 0 50px 0 0;
+        }
+
+        .event-description {
+          padding: 0 0 0 50px;
+
+          strong {
+            margin: 0 0 12px;
+          }
+        }
+      }
+    }
+  }
+}

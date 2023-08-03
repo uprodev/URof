@@ -98,6 +98,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        img {
+          width: auto;
+          height: auto;
+        }
       }
 
       &:first-child {
@@ -298,7 +303,7 @@
 
     .partners-slider {
       max-width: 1579px;
-      padding: 20px 0;
+      padding: 20px 0 7px;
 
       &:before {
         width: 1396px;

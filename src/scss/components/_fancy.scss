@@ -1,0 +1,52 @@
+.fancybox-show-infobar {
+  .fancybox-infobar {
+    display: none;
+  }
+}
+
+.fancybox-show-toolbar {
+  .fancybox-toolbar {
+    .fancybox-button {
+      &--zoom,
+      &--play,
+      &--thumbs {
+        display: none !important;
+      }
+    }
+  }
+}
+
+.fancybox-navigation {
+  .fancybox-button {
+    div {
+      opacity: 0;
+    }
+
+    &--arrow_left {
+      background: url(../images/icons/fancy-left.svg) 50% no-repeat;
+    }
+    &--arrow_right {
+      background: url(../images/icons/fancy-right.svg) 50% no-repeat;
+    }
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+}
+
+.fancybox-caption {
+  color: $white;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 14px;
+
+  strong {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    text-transform: uppercase;
+  }
+}

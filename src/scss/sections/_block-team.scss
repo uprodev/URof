@@ -1,0 +1,237 @@
+.block-team {
+  padding: 30px 10px 20px;
+
+  .col-wrapper {
+    .col-left {
+      border-top: $border;
+      padding: 14px 0 22px;
+
+      h2 {
+        margin: 0 0 8px;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .col-right {
+      .row {
+        --bs-gutter-x: 14px;
+        --bs-gutter-y: 18px;
+      }
+    }
+  }
+
+  .team-item {
+    .item-image {
+      padding: 0 70px 0 0;
+      background-color: $black;
+      position: relative;
+
+      figure {
+        @include img-abs-container(84.8%);
+      }
+
+      .sticker {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 71px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $black;
+
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 10px;
+          height: 100%;
+        }
+
+        img {
+          display: block;
+          max-width: 100%;
+          max-height: 100%;
+          width: auto;
+          height: auto;
+          object-fit: cover;
+        }
+
+        &--double {
+          span {
+            height: 50%;
+          }
+        }
+      }
+
+      .flag {
+        position: absolute;
+        left: 7px;
+        top: 7px;
+        width: 21px;
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .item-text {
+      position: relative;
+      padding: 4px 30px 0 7px;
+
+      .icon {
+        position: absolute;
+        top: 7px;
+        right: 7px;
+        width: 16px;
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .item-name {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+      }
+      .item-description {
+        font-size: 10px;
+        font-weight: 200;
+        line-height: 16px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    background-image: url(../images/bg/bg-team-1.svg), url(../images/bg/bg-team-2.svg);
+    background-size: auto;
+    background-position: 0 bottom;
+    background-repeat: no-repeat;
+
+    .col-wrapper {
+      display: flex;
+      margin: 0 -7px;
+
+      .col-left {
+        padding: 21px 0 0;
+        margin: 0 7px;
+        width: 24%;
+        flex: 0 0 auto;
+        border-top: $border;
+      }
+
+      .col-right {
+        border-top: $border;
+        padding: 28px 0 0;
+        margin: 0 7px;
+        width: 100%;
+
+        .row {
+          --bs-gutter-y: 21px;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 42px 57px;
+
+    .col-wrapper {
+      display: flex;
+      margin: 0 -10px;
+
+      .col-left {
+        padding: 30px 0 0;
+        margin: 0 10px;
+
+        h2 {
+          margin: 0 0 16px;
+        }
+      }
+
+      .col-right {
+        padding: 40px 0 0;
+        margin: 0 10px;
+
+        .row {
+          --bs-gutter-x: 20px;
+          --bs-gutter-y: 38px;
+        }
+      }
+    }
+
+    .team-item {
+      .item-image {
+        figure {
+          @include img-abs-container(85.25%);
+        }
+      }
+      .item-text {
+        .item-name {
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 20px;
+        }
+        .item-description {
+          font-size: 9px;
+          line-height: 12px;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding: 60px 80px 68px;
+
+    .team-item {
+      .item-image {
+        padding: 0 100px 0 0;
+
+        .sticker {
+          width: 100px;
+          padding: 15px 0;
+
+          span {
+            padding: 15px;
+          }
+        }
+
+        .flag {
+          left: 10px;
+          top: 10px;
+          width: 30px;
+        }
+      }
+
+      .item-text {
+        padding: 6px 40px 0 10px;
+
+        .icon {
+          top: 10px;
+          right: 10px;
+          width: 23px;
+        }
+
+        .item-name {
+          font-size: 18px;
+          line-height: 28px;
+        }
+        .item-description {
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+}

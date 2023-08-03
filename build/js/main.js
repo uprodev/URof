@@ -1,6 +1,4 @@
 jQuery(document).ready(function ($) {
-  ("partners-slider");
-
   if (document.querySelector(".partners-slider .swiper")) {
     const eventsSwiper = new Swiper(document.querySelector(".partners-slider .swiper"), {
       loop: false,
@@ -20,6 +18,72 @@ jQuery(document).ready(function ($) {
           slidesPerView: "auto",
           spaceBetween: 72,
         },
+      },
+    });
+  }
+
+  if (document.querySelector(".image-slider")) {
+    document.querySelectorAll(".image-slider").forEach((el) => {
+      const imageSwiper = new Swiper(el.querySelector(".swiper"), {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        speed: 500,
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        breakpoints: {
+          768: {
+            loop: false,
+            slidesPerView: 3,
+            grid: {
+              rows: 2,
+            },
+            spaceBetween: 20,
+          },
+          1024: {
+            loop: false,
+            slidesPerView: 4,
+            grid: {
+              rows: 2,
+            },
+            spaceBetween: 20,
+          },
+          1280: {
+            loop: false,
+            slidesPerView: 5,
+            grid: {
+              rows: 2,
+            },
+            spaceBetween: 14,
+          },
+          1700: {
+            loop: false,
+            slidesPerView: 5,
+            grid: {
+              rows: 2,
+            },
+            spaceBetween: 20,
+          },
+        },
+      });
+    });
+  }
+
+  if (document.querySelector(".gallery-slider")) {
+    const gallerySwiper = new Swiper(".gallery-slider .swiper", {
+      loop: true,
+      loopedSlides: 3,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      speed: 500,
+      navigation: {
+        nextEl: ".gallery-slider .swiper-button-next",
+        prevEl: ".gallery-slider .swiper-button-prev",
+      },
+      breakpoints: {
+        768: {},
       },
     });
   }
@@ -65,6 +129,10 @@ jQuery(document).ready(function ($) {
   });
 
   // tabs
+  $(".tab-nav-toggler").on("click", function () {
+    $(this).next().slideToggle(200);
+  });
+
   $(".tabs-nav a").each(function () {
     if ($(this).parent().hasClass("active")) {
       var panel = $($(this).attr("href"));
@@ -77,6 +145,11 @@ jQuery(document).ready(function ($) {
     $(".tab-panel.active").removeClass("active").hide(0);
     $(this).parent().addClass("active");
     $($(this).attr("href")).addClass("active").fadeIn(400);
+    if ($(this).parents().hasClass("block-events") || $(this).parents().hasClass("block-forms")) {
+      if ($(window).width() < 768) {
+        $(this).parents(".section").find(".tabs-nav ul").slideUp(20);
+      }
+    }
   });
 
   $("#btnDonate").on("click", function () {
