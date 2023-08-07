@@ -81,8 +81,8 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 40px;
-        height: 40px;
+        width: 43px;
+        height: 43px;
 
         &.swiper-button-next {
           background: url(../images/icons/slider-arrow-right.svg) 50% / cover no-repeat;
@@ -118,9 +118,6 @@
 
       .swiper-button-next,
       .swiper-button-prev {
-        width: 43px;
-        height: 43px;
-
         &.swiper-button-next {
           right: 0;
         }

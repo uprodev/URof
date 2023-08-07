@@ -12,25 +12,68 @@
       &--thumbs {
         display: none !important;
       }
+
+      &--close {
+        background-color: transparent;
+        padding: 0;
+        width: 32px;
+        height: 32px;
+        background: url(../images/icons/close.svg) 50% no-repeat;
+        top: 40px;
+        right: 40px;
+
+        svg {
+          display: none;
+        }
+      }
     }
   }
 }
 
 .fancybox-navigation {
   .fancybox-button {
+    padding: 0;
+    width: 43px;
+    height: 43px;
+    top: calc(50% - 92px);
+
     div {
       opacity: 0;
     }
 
     &--arrow_left {
-      background: url(../images/icons/fancy-left.svg) 50% no-repeat;
+      background: url(../images/icons/fancy-left.svg) 50% / cover no-repeat;
+      left: 40px;
     }
     &--arrow_right {
-      background: url(../images/icons/fancy-right.svg) 50% no-repeat;
+      background: url(../images/icons/fancy-right.svg) 50% / cover no-repeat;
+      right: 40px;
     }
 
     @include media-breakpoint-down(md) {
       display: none;
+    }
+
+    @include media-breakpoint-up(xl) {
+      &--arrow_left {
+        left: 85px;
+      }
+      &--arrow_right {
+        right: 85px;
+      }
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: 61px;
+      height: 61px;
+      top: calc(50% - 36px);
+
+      &--arrow_left {
+        left: 110px;
+      }
+      &--arrow_right {
+        right: 110px;
+      }
     }
   }
 }
@@ -48,5 +91,22 @@
     font-weight: 700;
     line-height: 32px;
     text-transform: uppercase;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 18px;
+    line-height: 32px;
+
+    strong {
+      font-size: 24px;
+      line-height: 42px; /* 175% */
+    }
+  }
+}
+
+.fancybox-inner {
+  @include media-breakpoint-up(xxl) {
+    border: 40px solid $black;
+    border-radius: 10px;
   }
 }

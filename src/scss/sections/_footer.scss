@@ -53,10 +53,15 @@
 
     .socials {
       margin: -7px 0 0;
+      display: flex;
 
       a {
         display: block;
         width: 37px;
+
+        & + a {
+          margin-left: 12px;
+        }
 
         img {
           display: block;
@@ -192,7 +197,7 @@
       }
 
       .socials {
-        width: 33px;
+        width: 78px;
         padding: 6px 0 0;
 
         a {
@@ -258,11 +263,15 @@
       }
 
       .socials {
-        width: 48px;
+        width: 111px;
         padding: 6px 0 0;
 
         a {
           width: 48px;
+
+          & + a {
+            margin-left: 15px;
+          }
         }
       }
     }

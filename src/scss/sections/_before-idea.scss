@@ -1,4 +1,9 @@
 .before-idea {
+  background-image: url(../images/bg/bg-idea-1-sm.svg), url(../images/bg/bg-idea-2-sm.svg);
+  background-size: auto;
+  background-position: right top;
+  background-repeat: no-repeat;
+
   .block-header {
     padding: 40px 10px 0;
     margin: 0 0 60px;
@@ -282,6 +287,9 @@
   }
 
   @include media-breakpoint-up(lg) {
+    background-image: url(../images/bg/bg-idea-1.svg), url(../images/bg/bg-idea-2.svg);
+    background-size: 200px auto, 300px auto;
+
     .num-list {
       max-width: 1050px;
       margin: auto;
@@ -379,6 +387,7 @@
 
   @include media-breakpoint-up(xl) {
     padding: 42px 56px 0;
+    background-size: auto;
 
     .col-wrapper {
       background-position: right -50px bottom 0;
