@@ -3,13 +3,13 @@ jQuery(document).ready(function ($) {
     const eventsSwiper = new Swiper(document.querySelector(".partners-slider .swiper"), {
       loop: false,
       slidesPerView: "auto",
-      spaceBetween: 0,
+      spaceBetween: 15,
       speed: 500,
-      freeMode: {
-        enabled: true,
-        sticky: true,
-      },
       breakpoints: {
+        768: {
+          slidesPerView: "auto",
+          spaceBetween: 40,
+        },
         1024: {
           slidesPerView: "auto",
           spaceBetween: 51,

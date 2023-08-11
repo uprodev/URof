@@ -100,8 +100,11 @@
         justify-content: center;
 
         img {
+          display: block;
           width: auto;
           height: auto;
+          max-width: 100px;
+          max-height: 30px;
         }
       }
 
@@ -139,13 +142,15 @@
       margin: 0;
       text-align: center;
 
-      .swiper {
-        display: inline-block;
-      }
-
       .swiper-slide {
         figure {
-          padding: 0 26px;
+          img {
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: 130px;
+            max-height: 40px;
+          }
         }
       }
     }
@@ -251,6 +256,17 @@
         }
       }
     }
+
+    .partners-slider {
+      .swiper-slide {
+        figure {
+          img {
+            max-width: 150px;
+            max-height: 50px;
+          }
+        }
+      }
+    }
   }
 
   @include media-breakpoint-up(xxl) {
@@ -303,7 +319,7 @@
 
     .partners-slider {
       max-width: 1579px;
-      padding: 20px 0 7px;
+      padding: 20px 0;
 
       &:before {
         width: 1396px;
