@@ -1,10 +1,13 @@
 jQuery(document).ready(function ($) {
   if (document.querySelector(".partners-slider .swiper")) {
     const eventsSwiper = new Swiper(document.querySelector(".partners-slider .swiper"), {
-      loop: false,
+      loop: true,
+      speed: 5000,
       slidesPerView: "auto",
       spaceBetween: 15,
-      speed: 500,
+      autoplay: {
+        delay: 0,
+      },
       breakpoints: {
         768: {
           slidesPerView: "auto",
@@ -113,10 +116,10 @@ jQuery(document).ready(function ($) {
       $("html, body").animate({ scrollTop: target.offset().top }, 800);
 
       if ($(this).attr("href") === "#charity") {
-        $(".tabs-nav .active").removeClass("active");
-        $(".tab-panel.active").removeClass("active").hide(0);
-        $(".tabs-nav a[href='#tab03']").parent().addClass("active");
-        $("#tab03").addClass("active").fadeIn(400);
+        $(".before-tabs .tabs-nav .active").removeClass("active");
+        $(".before-tabs .tab-panel.active").removeClass("active").hide(0);
+        $(".before-tabs .tabs-nav a[href='#tab03']").parent().addClass("active");
+        $(".before-tabs #tab03").addClass("active").fadeIn(400);
       }
     }
   });
@@ -141,8 +144,9 @@ jQuery(document).ready(function ($) {
   });
   $(".tabs-nav a").on("click", function (e) {
     e.preventDefault();
-    $(".tabs-nav .active").removeClass("active");
-    $(".tab-panel.active").removeClass("active").hide(0);
+    var tabs = $(this).parents(".tabs");
+    tabs.find(".tabs-nav .active").removeClass("active");
+    tabs.find(".tab-panel.active").removeClass("active").hide(0);
     $(this).parent().addClass("active");
     $($(this).attr("href")).addClass("active").fadeIn(400);
     if ($(this).parents().hasClass("block-events") || $(this).parents().hasClass("block-forms")) {
